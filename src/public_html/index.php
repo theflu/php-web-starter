@@ -1,1 +1,4 @@
-<h1>Hello World!</h1>
+<?php
+require '../lib/app.php';
+
+echo $twig->render('index.twig');
