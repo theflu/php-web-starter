@@ -23,7 +23,7 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 COPY composer.json .
 COPY composer.lock .
 
-# Install dependancies
+# Install dependencies
 RUN composer install
 
 # Copy the src

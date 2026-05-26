@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/theflu/APIRouter.git"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0",
+        "theflu/apirouter": "dev-psr"
+    }
+}
