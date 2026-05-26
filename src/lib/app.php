@@ -1,4 +1,5 @@
 <?php
+require 'config.php';
 require '../vendor/autoload.php';
 
 const _LIB_ = __DIR__;
