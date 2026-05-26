@@ -1,4 +1,10 @@
 <?php
 require '../lib/app.php';
 
-echo $twig->render('index.twig');
+use APIRouter\Router;
+
+$router = new Router();
+
+$router->loadRoutes(_LIB_ . '/routes');
+
+$router->dispatch();
