@@ -11,3 +11,4 @@ $twig = new \Twig\Environment($loader, []);
 // Add globals to twig
 $twig->addGlobal('APP_NAME', _APP_NAME_);
 $twig->addGlobal('CSS', _CSS_);
+$twig->addGlobal('JS', _JS_);
