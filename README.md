@@ -58,7 +58,7 @@ A lightweight, containerized starter kit for building PHP web applications. Out-
 
 2. **Start the development server:**
    ```bash
-   docker compose -f docker-compose-devel.yml up --build
+   docker compose -f docker-compose-devel.yml up --watch
    ```
 
 3. **Access the application:**

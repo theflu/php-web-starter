@@ -12,3 +12,7 @@ services:
     ports:
       - 8080:80
     command: sh -c "composer install && apache2-foreground"
+    develop:
+      watch:
+        - action: restart
+          path: .env
