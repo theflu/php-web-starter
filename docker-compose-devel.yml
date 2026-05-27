@@ -3,6 +3,8 @@ services:
     container_name: app
     build: 
       context: .
+    env_file:
+      - .env
     volumes:
       - ./src:/app
       - ./composer.json:/app/composer.json
