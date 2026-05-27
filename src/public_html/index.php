@@ -1,5 +1,5 @@
 <?php
-require '../lib/app.php';
+require_once __DIR__ . '/../lib/app.php';
 
 use APIRouter\Router;
 
