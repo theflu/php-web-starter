@@ -7,7 +7,8 @@ const _LIB_ = __DIR__;
 // Configure twig
 $loader = new \Twig\Loader\FilesystemLoader(_LIB_ . '/views');
 $twig = new \Twig\Environment($loader, [
-    'debug' => _DEBUG_
+    'debug' => _DEBUG_,
+    'cache' => '/tmp/twig_cache',
 ]);
 
 // Add globals to twig
