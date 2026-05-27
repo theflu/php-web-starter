@@ -4,14 +4,13 @@ A lightweight, containerized starter kit for building PHP web applications. Out-
 
 ---
 
-## Features
+## Stack
 
-- **PHP 8.5 & Apache**: Containerized runtime.
-- **Twig 3.0**: Premium templating engine for clean separation of concerns.
-- **APIRouter**: Custom, lightweight, and PSR-compliant routing system.
-- **Bootstrap 5.3.8**: Fully integrated responsive UI components.
-- **Dark Mode Support**: Automated light/dark mode toggling out of the box.
-- **Docker Compose Setup**: Development and production orchestrations ready.
+- [**Docker**](https://docs.docker.com/): Containerization
+- [**PHP 8.5 & Apache**](https://hub.docker.com/_/php):Container
+- [**Twig 3.0**](https://twig.symfony.com/): Templating engine
+- [**APIRouter**](https://github.com/theflu/APIRouter/tree/psr): Routing system
+- [**Bootstrap 5.3**](https://getbootstrap.com/docs/5.3/getting-started/introduction/): UI styling
 
 ---
 
@@ -61,7 +60,6 @@ A lightweight, containerized starter kit for building PHP web applications. Out-
    ```bash
    docker compose -f docker-compose-devel.yml up --build
    ```
-   *This command mounts the `./src` folder, installs Composer dependencies inside the container, and starts Apache with auto-reload capability.*
 
 3. **Access the application:**
    Open [http://localhost:8080](http://localhost:8080) in your web browser.
@@ -85,7 +83,7 @@ global $router;
 global $twig;
 
 $router->get('/about', function (ServerRequest $req) use ($twig) {
-    $body = $twig->render('about.twig');
+    $body = $twig->render('about.twig', ['foo' => 'bar']);
     return new Response(200, [], $body);
 });
 ```
@@ -97,6 +95,7 @@ Templates use Twig and are located under `src/lib/views/`. Create layout-specifi
 
 {% block content %}
     <h1>My Content</h1>
+    <h2>{{ foo }}</h2>
 {% endblock %}
 ```
 
