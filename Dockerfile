@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.5-apache
 
 WORKDIR /app
 
@@ -23,11 +23,9 @@ RUN a2enmod rewrite
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 # Copy composer config
-COPY composer.json .
-COPY composer.lock .
+COPY composer.json composer.lock ./
 
 # Install dependencies
-RUN composer install
-
+RUN composer install --no-dev --optimize-autoloader
 # Copy the src
 COPY ./src .
