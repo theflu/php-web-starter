@@ -5,6 +5,11 @@
             "url": "https://github.com/theflu/APIRouter.git"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "App\\": []
+        }
+    },
     "require": {
         "twig/twig": "^3.0",
         "theflu/apirouter": "dev-psr"
